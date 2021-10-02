@@ -8,7 +8,7 @@ namespace _2_200
         private int Power { get; set; }
         private LinkedListNode<int> Node;
         private LinkedList<int> List;
-        private string Value { get;}
+        private string Value { get; set; }
 
         private void feelingList()
         {
@@ -31,6 +31,16 @@ namespace _2_200
                     Node = Node.Next;
             }
             Node = List.First;
+        }
+        private string ToString(int _val)
+        {
+            Value = _val.ToString();
+            return Value;
+        }
+        private string ToString(string _str)
+        {
+            Value = _str;
+            return Value;
         }
         public PowerOfNumber(int _number, int _power)
         {
@@ -59,11 +69,15 @@ namespace _2_200
 
         public string getPower()
         {
-
-            for (int q = 1; q < Power; ++q)
-            {
-                feelingList();
-            }
+            if (Power == 0)
+                return this.ToString(1);
+            else if (Power < 0)
+                return this.ToString("exception : power not natural number");
+            else
+                for (int q = 1; q < Power; ++q)
+                {
+                    feelingList();
+                }
             return this.ToString();
         }
     }
