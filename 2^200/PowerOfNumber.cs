@@ -8,7 +8,7 @@ namespace _2_200
         private int Power { get; set; }
         private LinkedListNode<int> Node;
         private LinkedList<int> List;
-        private string Value { get; set; }
+        private string Value { get;}
 
         private void feelingList()
         {
