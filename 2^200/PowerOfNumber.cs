@@ -4,11 +4,11 @@ namespace _2_200
 {
     class PowerOfNumber
     {
-        private int Number { get; set; }
-        private int Power { get; set; }
+        public int Number { get; set; }
+        public int Power { get; set; }
         private LinkedListNode<int> Node;
         private LinkedList<int> List;
-        private string Value { get; set; }
+        public string Value { get; set; }
 
         private void feelingList()
         {
@@ -66,7 +66,6 @@ namespace _2_200
                 Value = "0";
             return Value;
         }
-
         public string getPower()
         {
             if (Power == 0)
